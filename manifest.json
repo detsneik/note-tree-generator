@@ -1,0 +1,10 @@
+{
+	"id": "note-tree-generator",
+	"name": "Note Tree Generator",
+	"version": "0.1.0",
+	"minAppVersion": "0.1.0",
+	"description": "Generates a structured tree view of your notes based on internal links, with sharing capabilities.",
+	"author": "Detsneik",
+	"authorUrl": "https://github.com/detsneik",
+	"isDesktopOnly": false
+} 

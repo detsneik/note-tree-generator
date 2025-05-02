@@ -1,0 +1,284 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+/*
+  Estilos rediseñados para Note Tree Generator plugin
+*/
+
+/* Quitar scroll de la ventana principal */
+.note-tree-modal,
+.note-tree-modal .modal-content {
+  overflow: hidden !important;
+}
+
+/* Estilo del header */
+.note-tree-modal .modal-header {
+  margin-bottom: 15px;
+}
+
+.note-tree-modal .modal-header h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Contenedor principal con flex */
+.note-tree-modal .note-tree-container {
+  display: flex;
+  gap: 20px;
+  height: calc(100% - 130px);
+  overflow: hidden;
+}
+
+/* Barra de búsqueda */
+.note-tree-modal .search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: var(--background-primary-alt);
+  border-radius: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.note-tree-modal .search-container input {
+  flex-grow: 1;
+  margin-left: 5px;
+  padding: 6px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+/* Contenedores de lista y preview */
+.note-tree-modal .file-list-container, 
+.note-tree-modal .preview-container {
+  flex: 1;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 5px;
+  padding: 15px;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títulos de secciones */
+.note-tree-modal .file-list-container h3,
+.note-tree-modal .preview-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 5px;
+}
+
+/* Lista de archivos con scroll */
+.note-tree-modal .file-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Elementos de la lista */
+.note-tree-modal .file-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.note-tree-modal .file-item:hover {
+  background-color: var(--background-secondary);
+}
+
+.note-tree-modal .file-item.selected {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+/* Mensaje de no resultados */
+.note-tree-modal .no-results {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Área de preview con scroll */
+.note-tree-modal .preview {
+  flex: 1;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  font-size: 14px;
+  padding: 10px;
+  background-color: var(--background-primary-alt);
+  border-radius: 4px;
+}
+
+/* Formato de los elementos del árbol */
+.note-tree-modal .tree-item {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+}
+
+.note-tree-modal .tree-number {
+  min-width: 20px;
+  color: var(--text-normal);
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.note-tree-modal .tree-content {
+  flex-grow: 1;
+}
+
+.note-tree-modal .tree-heading {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Contenedor de botones fijo en la parte inferior */
+.note-tree-modal .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: var(--background-primary);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.note-tree-modal .button-container button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.note-tree-modal .button-container button:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+/* Mensaje de error */
+.note-tree-modal .error-message {
+  color: var(--text-error);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background-color: var(--background-modifier-error);
+}
+
+/* Enlaces internos */
+.note-tree-modal .internal-link {
+  color: var(--text-accent);
+  text-decoration: underline;
+}
+
+/* Información de depuración */
+.note-tree-modal .debug-info {
+  font-family: monospace;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: var(--background-secondary);
+  border-radius: 4px;
+  white-space: pre;
+  overflow: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .note-tree-modal .note-tree-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .note-tree-modal .file-list-container,
+  .note-tree-modal .preview-container {
+    height: 220px;
+  }
+}
+
+/* Estilos para el modal de compartir notas */
+.share-notes-modal {
+  padding: 20px;
+}
+
+.share-notes-modal h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 10px;
+}
+
+.share-notes-modal p {
+  margin-bottom: 20px;
+  color: var(--text-normal);
+}
+
+.share-notes-modal .form-container {
+  margin-bottom: 20px;
+}
+
+.share-notes-modal label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.share-notes-modal .folder-name-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-primary);
+  font-size: 14px;
+}
+
+.share-notes-modal .button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.share-notes-modal .button-container button {
+  padding: 8px 15px;
+  border-radius: 4px;
+  background-color: var(--background-secondary);
+  color: var(--text-normal);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.share-notes-modal .button-container button:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.share-notes-modal .button-container button.mod-cta {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.share-notes-modal .button-container button.mod-cta:hover {
+  background-color: var(--interactive-accent-hover);
+}
