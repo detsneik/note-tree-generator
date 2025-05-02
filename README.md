@@ -61,4 +61,4 @@ The plugin offers the following configuration options:
 
 ## Alternative
 
-This plugin is an adaptation for Obsidian of the Python program [NoteTreeGenerator](https://github.com/detsneik/ntg4o), which was used to generate note trees based on links in markdown documents.
+This plugin is an adaptation for Obsidian of the Python program [NoteTreeGenerator](https://github.com/detsneik/note_tree_generator_4_obsidian), which was used to generate note trees based on links in markdown documents.
